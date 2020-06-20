@@ -23,7 +23,6 @@ const isLoggedIn = authRouter.isLoggedIn
 const loggingRouter = require('./routes/logging');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const dbRouter = require('./routes/db');
 const toDoRouter = require('./routes/todo');
 const toDoAjaxRouter = require('./routes/todoAjax');
 
@@ -48,9 +47,6 @@ app.use(authRouter)
 app.use(loggingRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/db',dbRouter);
-app.use('/dbdemo',
-    (req,res) => res.render('dbdemo'))
 
 app.use('/todo',toDoRouter);
 app.use('/todoAjax',toDoAjaxRouter);
