@@ -18,13 +18,13 @@ export clientSecret="ZZZZZZZZZ"
 export callbackURL="https://....../login/authorized"
 export MONGODB_URI="mongodb://........"
 ```
-and you can put these commands in a file called setupenv.sh and run them with 
-```
-source setupenv.sh
-```
+You can also put these commands in a shell script...
 
-To run this on heroku you can set the heroku environment variables with the command
+To run this on heroku you can set the heroku environment variables by logging into http://heroku.com, selecting your app, and clicking on the settings tab which reveals the "reveal config variables" button.
+You can also set the environment variables in heroku with the heroku command line interface:
+```
 heroku config:set clientId:"ZZZZZZZZ"
+```
 etc.
 
 You start the app locally with
